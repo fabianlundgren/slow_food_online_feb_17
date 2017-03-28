@@ -1,4 +1,6 @@
+[![Build Status](https://semaphoreci.com/api/v1/craftacademy/slow_food_online_feb_17/branches/develop/shields_badge.svg)](https://semaphoreci.com/craftacademy/slow_food_online_feb_17)
 # README
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
