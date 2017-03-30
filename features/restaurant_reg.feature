@@ -11,5 +11,6 @@ Feature: Create account for restaurant
     And I fill in "Zip code" with "41133"
     And I fill in "City" with "Gothenburg"
     And I fill in "Food style" with "Pizza"
+    And I fill in "Description" with "God kebibpizza med såååås"
     And I click "Submit"
     And I should see "Restaurant successfully created"

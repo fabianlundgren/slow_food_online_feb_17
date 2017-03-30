@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
 
     if @restaurant.save
       flash[:notice] = "Restaurant successfully created"
-      render 'restaurants/new'
+      render 'restaurants/show'
     end
   end
 
@@ -20,6 +20,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-   params.require(:restaurant).permit(:name, :street, :zip_code, :city, :food_style)
+   params.require(:restaurant).permit(:name, :street, :zip_code, :city, :food_style, :description)
   end
 end

@@ -4,8 +4,8 @@ Feature: Restaurant show page
   I would like to visit the restaurants page
 
   Background:
-   Given the following restaurants exist
-    | name        | description           | street      |
+   Given the following restaurant exist
+    | name        | description           | street       |
     | NisseKebbab | God Kebib med såååås  | Kebabvägen 1 |
 
   Scenario:

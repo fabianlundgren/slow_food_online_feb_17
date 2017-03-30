@@ -1,4 +1,8 @@
 %h1 Restaurant
 = @restaurant.name
-= @restaurant.food_style
+= @restaurant.description
 = @restaurant.street
+
+
+- if flash[:notice]
+  .notice= flash[:notice]
