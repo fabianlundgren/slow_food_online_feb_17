@@ -5,5 +5,6 @@ FactoryGirl.define do
     zip_code 1
     city "MyString"
     food_style "MyString"
+    description "MyString"
   end
 end

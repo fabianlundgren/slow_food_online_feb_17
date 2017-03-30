@@ -7,6 +7,7 @@ RSpec.describe Restaurant, type: :model do
     it { is_expected.to have_db_column :zip_code }
     it { is_expected.to have_db_column :city }
     it { is_expected.to have_db_column :food_style }
+    it { is_expected.to have_db_column :description }
   end
 
   describe 'Associations' do
@@ -19,6 +20,7 @@ RSpec.describe Restaurant, type: :model do
     it { is_expected.to validate_presence_of :zip_code }
     it { is_expected.to validate_presence_of :city }
     it { is_expected.to validate_presence_of :food_style }
+    it { is_expected.to validate_presence_of :description }
   end
 
   describe 'Factory' do

@@ -4,6 +4,7 @@ class Restaurant < ApplicationRecord
   validates :zip_code, presence: true
   validates :city, presence: true
   validates :food_style, presence: true
+  validates :description, presence: true
 
   has_one :menu
 end
