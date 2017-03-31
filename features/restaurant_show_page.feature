@@ -4,9 +4,12 @@ Feature: Restaurant show page
   I would like to visit the restaurants page
 
   Background:
-   Given the following restaurant exist
-    | name        | description           | street       |
-    | NisseKebbab | God Kebib med såååås  | Kebabvägen 1 |
+    Given the following restaurant exist
+     | name        | description           | street       |
+     | NisseKebbab | God Kebib med såååås  | Kebabvägen 1 |
+    Given the following menus exist
+     | name            | restaurant  |
+     | Nisses Takeaway | NisseKebbab |
 
   Scenario:
     Given I am on the index page
