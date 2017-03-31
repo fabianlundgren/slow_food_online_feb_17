@@ -15,3 +15,5 @@ Feature: Restaurant show page
     And I should see "NisseKebbab"
     And I should see "God Kebib med såååås"
     And I should see "Kebabvägen 1"
+    And I click "Menu"
+    Then I should see "Menu"

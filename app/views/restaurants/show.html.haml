@@ -3,6 +3,8 @@
 = @restaurant.description
 = @restaurant.street
 
+%br/
+= link_to 'Menu', restaurant_menu_path(@restaurant.id)
 
 - if flash[:notice]
   .notice= flash[:notice]

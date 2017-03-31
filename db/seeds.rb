@@ -8,12 +8,15 @@ Restaurant.delete_all
   zip_code= FFaker::Address.country_code,
   city= FFaker::Address.city,
   food_style= FFaker::Address.country
+  description= FFaker::Address.country
 
  Restaurant.create(name: name,
                    street: street,
                    zip_code: zip_code,
                    city: city,
-                   food_style: food_style)
+                   food_style: food_style,
+                   description: description)
+
 end
 
 puts "Created #{Restaurant.count} restaurants"
