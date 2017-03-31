@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
 
     if @restaurant.save
       flash[:notice] = "Restaurant successfully created"
-      render 'restaurants/show'
+      render :show
     end
   end
 
