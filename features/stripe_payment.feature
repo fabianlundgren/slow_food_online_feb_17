@@ -20,7 +20,6 @@ Feature: As a User
     And I click "Checkout"
     And I should see "Total: 180"
     When I click the "Pay with Card" stripe button
-    And I fill in appropriate card details
     And I fill in my card details on the stripe form
     And I submit the stripe form
     And I should see "Total: 180"
