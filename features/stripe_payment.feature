@@ -22,5 +22,4 @@ Feature: As a User
     When I click the "Pay with Card" stripe button
     And I fill in my card details on the stripe form
     And I submit the stripe form
-    And I should see "Total: 180"
     Then my order should be marked as true
