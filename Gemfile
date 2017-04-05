@@ -15,6 +15,7 @@ gem 'foundation-rails'
 gem 'acts_as_shopping_cart'
 gem 'rails-assets-gmaps', source: 'https://rails-assets.org'
 gem 'devise'
+gem 'stripe-rails'
 
 group :development, :test do
   gem 'pry'
@@ -26,6 +27,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'poltergeist'
+  gem 'dotenv-rails'
 end
 
 group :development do

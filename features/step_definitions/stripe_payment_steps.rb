@@ -1,5 +1,5 @@
-When(/^I click the "([^"]*)" stripe button$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I click the "([^"]*)" stripe button$/) do |arg|
+  find('.stripe-button-el').trigger('click')
 end
 
 When(/^I fill in appropriate card details$/) do
