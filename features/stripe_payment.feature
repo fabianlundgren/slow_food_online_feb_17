@@ -13,6 +13,7 @@ Feature: As a User
     | name       | price | menu            |
     | Kebabrulle | 180   | Nisses Takeaway |
 
+  @javascript
   Scenario: I check out and pay with my credit card
     Given I am on the restaurant menu page for "Nisses Takeaway"
     And I click "Buy" on "Kebabrulle"
