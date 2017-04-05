@@ -13,6 +13,11 @@ And(/^I fill in my card details on the stripe form$/) do
     end
 end
 
-When(/^I submit the stripe form$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+And(/^I submit the stripe form$/) do
+  cart = ShoppingCart.last
+  stripe_iframe = all('iframe[name=stripe_checkout_app]').last
+  Capybara.within_frame stripe_iframe do
+    click_button "Pay kr#{sprintf('%.2f', cart.total.to_i)}"
+  end
+  # sleep(1) --> Uncomment this line if you're running live tests with actual API calls to Stripe
 end

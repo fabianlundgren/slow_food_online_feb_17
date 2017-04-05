@@ -6,6 +6,10 @@ class ShoppingCartsController < ApplicationController
     session.delete(:cart_id)
   end
 
+  def create
+    
+  end
+
   def show
 
   end

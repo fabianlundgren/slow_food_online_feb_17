@@ -6,8 +6,10 @@ Rails.application.routes.draw do
 
   resources :shopping_cart_items, only: [:create], as: :items
 
+
   resources :shopping_carts, only: [:show], as: :cart
-  post "/complete", controller: :shopping_carts, action: :complete
+  post '/complete', controller: :shopping_carts, action: :complete
+  post '/charges', controller: :shopping_carts, action: :create
 
   resources :dish, only: [:show]
 
