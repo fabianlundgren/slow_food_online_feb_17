@@ -6,6 +6,8 @@ Given(/^there is a shopping cart saved in a cookie$/) do
   cart = ShoppingCart.last
   cart_id = cart.id
   case Capybara.current_session.driver
+  when Capybara::Poltergeist::Driver
+    page.driver.set_cookie('cart_id', cart_id)
   when Capybara::RackTest::Driver
     headers = {}
     Rack::Utils.set_cookie_header!(headers, 'cart_id', cart_id)
