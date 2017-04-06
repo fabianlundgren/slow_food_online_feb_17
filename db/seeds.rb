@@ -17,6 +17,10 @@ Restaurant.delete_all
                    food_style: food_style,
                    description: description)
 
+  menu = FactoryGirl.create(:menu, restaurant: Restaurant.first)
+  FactoryGirl.create(:dish, menu: menu, name: 'Burger')
+  FactoryGirl.create(:dish, menu: menu, name: 'Hot dog')
+
 end
 
 puts "Created #{Restaurant.count} restaurants"

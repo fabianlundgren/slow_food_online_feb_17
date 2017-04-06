@@ -34,4 +34,6 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.stripe.secret_key = ENV['STRIPE_SECRET_KEY']
 end

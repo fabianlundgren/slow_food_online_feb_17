@@ -26,5 +26,6 @@ module SlowFoodOnlineFeb17
       generate.routing_specs false
       generate.controller_specs false
     end
+    config.stripe.publishable_key = ENV['PUBLISHABLE_KEY']
   end
 end
