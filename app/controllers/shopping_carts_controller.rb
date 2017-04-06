@@ -8,11 +8,11 @@ class ShoppingCartsController < ApplicationController
   end
 
   def create
-    charge = perform_transaction(params, @cart)
+    charge = StripePayment.perform_payment(params, @cart)
     if charge.class == Stripe::Charge
-      redirect_to complete_path, notice: 'that went well'
+      redirect_to complete_path, notice: 'Transaction completed'
     else
-      flash[:notice] = 'That didn\'t work out'
+      flash[:notice] = 'Oops, something went wrong.'
       redirect_to cart_path(@cart)
     end
 
@@ -25,21 +25,5 @@ class ShoppingCartsController < ApplicationController
 
   def get_shopping_cart
     @cart = ShoppingCart.find(session[:cart_id])
-  end
-
-  def perform_transaction(params, cart)
-    customer = Stripe::Customer.create(
-      email: params[:stripeEmail],
-      source: params[:stripeToken]
-    )
-
-    charge = Stripe::Charge.create(
-      customer: customer.id,
-      amount: (cart.total * 100).to_i,
-      description: 'Slow Food order',
-      currency: 'sek'
-    )
-
-    return charge
   end
 end
